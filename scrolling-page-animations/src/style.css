@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: hotpink;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.header h1 {
+  font-size: 30px;
+  color: white;
+}
+
+.about-wrapper {
+  height: 30em;
+  width: 100vw;
+}
+
+.about-text {
+  position: relative;
+  width: 30em;
+  height: 20em;
+  background-color: white
+}
+
+.about-wrapper > .show {
+  position: absolute;
+  transform: translate(-30em, 0em);
+  width: 30em;
+  height: 20em;
+  -webkit-animation: slide-in 1s forwards;
+  animation: slide-in 1s forwards;
+}
+
+.about-wrapper > .hidden {
+  transform: translate(-30em, 0em);
+  -webkit-animation: fade-out 1s reverse;
+  animation: fade-out 1s reverse;
+}
+
+.stories > .story {
+  background-color: cyan;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.stories > .hidden {
+  opacity: 0;
+}
+
+@-webkit-keyframes slide-in {
+  100% { transform: translate(0em, 0em); opacity: 1 }
+}
+
+@keyframes slide-in {
+  100% { transform: translate(0em, 0em);  opacity: 1 }
+}
+
+@-webkit-keyframes fade-out {
+  100% { opacity: 0 }
+}
+
+@keyframes fade-out {
+  100% { opacity: 0 }
+}
